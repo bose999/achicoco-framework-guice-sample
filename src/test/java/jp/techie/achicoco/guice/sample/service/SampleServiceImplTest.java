@@ -50,8 +50,8 @@ public class SampleServiceImplTest {
 			checkString = sampleService.outputParamLog(null, null);
 			assertEquals(checkString, "");
 		} catch (Exception e) {
-			fail();
 			logUtil.fatal("Exception", e);
+			fail();
 		}
 	}
 
@@ -71,8 +71,8 @@ public class SampleServiceImplTest {
 			checkString = sampleService.outputParamLog(urlParamList, null);
 			assertEquals(checkString, "test1, test2, test3");
 		} catch (Exception e) {
+		    logUtil.fatal("Exception", e);
 			fail();
-			logUtil.fatal("Exception", e);
 		}
 	}
 
